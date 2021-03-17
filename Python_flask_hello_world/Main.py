@@ -1,12 +1,9 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:''@localhost/login'
 db = SQLAlchemy(app)
-
-
 
 class Login(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
